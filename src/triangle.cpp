@@ -11,5 +11,5 @@ triangle::triangle(unsigned int length1, unsigned int length2, unsigned int leng
 }
 
 bool triangle::isEquilateral() const {
-    return true;
+    return __length[0] == __length[1] && __length[1] == __length[2];
 }
