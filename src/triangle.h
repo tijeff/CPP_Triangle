@@ -7,7 +7,8 @@
 
 
 class triangle {
-
+public:
+    triangle(unsigned int, unsigned int, unsigned int);
 };
 
 

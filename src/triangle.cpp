@@ -3,3 +3,8 @@
 //
 
 #include "triangle.h"
+
+#include <stdexcept>
+
+triangle::triangle(unsigned int, unsigned int, unsigned int) {
+}
