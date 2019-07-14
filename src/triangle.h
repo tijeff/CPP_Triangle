@@ -9,6 +9,9 @@
 class triangle {
 public:
     triangle(unsigned int, unsigned int, unsigned int);
+
+private:
+    unsigned int __length[3];
 };
 
 
