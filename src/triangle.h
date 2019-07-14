@@ -10,7 +10,10 @@ class triangle {
 public:
     triangle(unsigned int, unsigned int, unsigned int);
 
-    bool isEquilateral();
+    bool isEquilateral() const;
+
+private:
+    unsigned int __length[3];
 };
 
 
