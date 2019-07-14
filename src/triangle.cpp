@@ -8,3 +8,7 @@
 
 triangle::triangle(unsigned int, unsigned int, unsigned int) {
 }
+
+bool triangle::isEquilateral() {
+    return true;
+}
