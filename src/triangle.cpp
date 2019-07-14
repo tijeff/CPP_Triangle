@@ -11,5 +11,5 @@ triangle::triangle(unsigned int length1, unsigned int length2, unsigned int leng
 }
 
 bool triangle::isIsocele() {
-    return __length[0] == __length[1] || __length[1] == __length[2];
+    return __length[0] == __length[1] || __length[1] == __length[2] || __length[0] == __length[2];
 }
