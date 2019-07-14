@@ -9,3 +9,7 @@
 triangle::triangle(unsigned int length1, unsigned int length2, unsigned int length3) :
         __length{length1, length2, length3} {
 }
+
+bool triangle::isIsocele() {
+    return __length[0] == __length[1];
+}

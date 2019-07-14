@@ -10,3 +10,8 @@
 TEST(Tests_triangle, constructor_3_lengths) { // NOLINT(cert-err58-cpp)
     EXPECT_NO_THROW(new triangle(4, 5, 6));
 }
+
+TEST(Tests_triangle, isIsoceleLengthd_1_and_2) { // NOLINT(cert-err58-cpp)
+    triangle triangle_under_test(10, 10, 6);
+    EXPECT_TRUE(triangle_under_test.isIsocele());
+}
