@@ -12,6 +12,8 @@ public:
 
     bool isEquilateral() const;
 
+    bool isIsocele() const;
+
 private:
     unsigned int __length[3];
 };
