@@ -10,9 +10,11 @@ class triangle {
 public:
     triangle(unsigned int, unsigned int, unsigned int);
 
-    bool isEquilateral() const;
+    [[nodiscard]] bool isEquilateral() const;
 
-    bool isIsocele() const;
+    [[nodiscard]] bool isIsocele() const;
+
+    [[nodiscard]] bool isRectangle() const;
 
 private:
     unsigned int __length[3];
