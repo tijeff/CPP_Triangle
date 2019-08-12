@@ -17,3 +17,7 @@ bool triangle::isEquilateral() const {
 bool triangle::isIsocele() const {
     return __length[0] == __length[1] || __length[1] == __length[2] || __length[0] == __length[2];
 }
+
+bool triangle::isRectangle() const {
+    return ((__length[2] * __length[2]) == (__length[0] * __length[0] + __length[1] * __length[1]));
+}
