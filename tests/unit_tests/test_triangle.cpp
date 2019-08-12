@@ -41,3 +41,8 @@ TEST(Tests_triangle, isRectangle_3_4_5) { // NOLINT(cert-err58-cpp)
     triangle triangle_under_test(3, 4, 5);
     EXPECT_TRUE(triangle_under_test.isRectangle());
 }
+
+TEST(Tests_triangle, isRectangle_5_3_4) { // NOLINT(cert-err58-cpp)
+    triangle triangle_under_test(5, 3, 4);
+    EXPECT_TRUE(triangle_under_test.isRectangle());
+}

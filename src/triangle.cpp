@@ -19,5 +19,6 @@ bool triangle::isIsocele() const {
 }
 
 bool triangle::isRectangle() const {
-    return ((__length[2] * __length[2]) == (__length[0] * __length[0] + __length[1] * __length[1]));
+    return (__length[2] * __length[2]) == (__length[0] * __length[0] + __length[1] * __length[1]) ||
+           (__length[0] * __length[0]) == (__length[1] * __length[1] + __length[2] * __length[2]);
 }
