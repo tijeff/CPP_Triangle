@@ -25,14 +25,11 @@ bool triangle::isRectangle() const {
     unsigned int length_smaller_2;
 
     if (length_max == __length[0]) {
-        length_smaller_1 = __length[1],
-                length_smaller_2 = __length[2];
+        length_smaller_1 = __length[1], length_smaller_2 = __length[2];
     } else if (length_max == __length[1]) {
-        length_smaller_1 = __length[0],
-                length_smaller_2 = __length[2];
+        length_smaller_1 = __length[0], length_smaller_2 = __length[2];
     } else {
-        length_smaller_1 = __length[0],
-                length_smaller_2 = __length[1];
+        length_smaller_1 = __length[0], length_smaller_2 = __length[1];
     }
     return (length_max * length_max) == (length_smaller_1 * length_smaller_1 + length_smaller_2 * length_smaller_2);
 }
