@@ -1,7 +1,10 @@
-#include "gtest/gtest.h"
-
 // System under test
 #include "triangle.h"
+
+#include "gtest/gtest.h"
+#include <iostream>
+#include <sstream>
+
 
 /**
  * \brief triangle tests
@@ -50,4 +53,11 @@ TEST(Tests_triangle, isRectangle_5_3_4) { // NOLINT(cert-err58-cpp)
 TEST(Tests_triangle, isRectangle_4_5_3) { // NOLINT(cert-err58-cpp)
     triangle triangle_under_test(4, 5, 3);
     EXPECT_TRUE(triangle_under_test.isRectangle());
+}
+
+TEST(Tests_triangle, operator_srteam_out) { // NOLINT(cert-err58-cpp)
+    triangle triangle_under_test(7, 12, 8);
+    std::stringstream string_triangle_under_test;
+    string_triangle_under_test << triangle_under_test;
+    EXPECT_STREQ("TRIANGLE: (7, 12, 8)", string_triangle_under_test.str().c_str());
 }

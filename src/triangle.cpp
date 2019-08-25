@@ -33,3 +33,9 @@ bool triangle::isRectangle() const {
     }
     return (length_max * length_max) == (length_smaller_1 * length_smaller_1 + length_smaller_2 * length_smaller_2);
 }
+
+std::ostream &operator<<(std::ostream &os, const triangle &the_triangle) {
+    os << "TRIANGLE: (" << the_triangle.__length[0] << ", " << the_triangle.__length[1] << ", "
+       << the_triangle.__length[2] << ")";
+    return os;
+};
