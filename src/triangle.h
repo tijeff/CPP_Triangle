@@ -13,7 +13,7 @@
 
 class triangle {
 public:
-    triangle(unsigned int, unsigned int, unsigned int);
+    triangle(double, double, double);
 
     [[nodiscard]] bool isEquilateral() const;
 
@@ -24,7 +24,7 @@ public:
     friend std::ostream &operator<<(std::ostream &os, const triangle &d);
 
 private:
-    unsigned int __length[3];
+    double __length[3];
 };
 
 

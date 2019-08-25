@@ -9,6 +9,9 @@
 // System under test
 #include "triangle.h"
 
+// Used library
+#include <cmath>
+
 // Tests library
 #include "gtest/gtest.h"
 
@@ -88,3 +91,10 @@ TEST(Tests_triangle, operator_srteam_out_rectangle) { // NOLINT(cert-err58-cpp)
     string_triangle_under_test << triangle_under_test;
     EXPECT_STREQ("TRIANGLE: (5, 3, 4) rectangle", string_triangle_under_test.str().c_str());
 }
+
+//TEST(Tests_triangle, operator_srteam_out_rectangle_isocel) { // NOLINT(cert-err58-cpp)
+//    triangle triangle_under_test(2, 2, sqrt(2*2+2*2));
+//    std::stringstream string_triangle_under_test;
+//    string_triangle_under_test << triangle_under_test;
+//    EXPECT_STREQ("TRIANGLE: (5, 3, 4) rectangle", string_triangle_under_test.str().c_str());
+//}

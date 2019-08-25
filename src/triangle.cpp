@@ -8,7 +8,7 @@
 #include <algorithm>
 
 // ---------------------------------------------------------------------------------------------------------------------
-triangle::triangle(unsigned int length1, unsigned int length2, unsigned int length3) :
+triangle::triangle(double length1, double length2, double length3) :
         __length{length1, length2, length3} {
 }
 
@@ -24,9 +24,9 @@ bool triangle::isIsosceles() const {
 
 // ---------------------------------------------------------------------------------------------------------------------
 bool triangle::isRectangle() const {
-    unsigned int length_max = std::max({__length[0], __length[1], __length[2]});
-    unsigned int length_smaller_1;
-    unsigned int length_smaller_2;
+    double length_max = std::max({__length[0], __length[1], __length[2]});
+    double length_smaller_1;
+    double length_smaller_2;
 
     if (length_max == __length[0]) {
         length_smaller_1 = __length[1], length_smaller_2 = __length[2];
@@ -50,4 +50,4 @@ std::ostream &operator<<(std::ostream &os, const triangle &the_triangle) {
         os << " rectangle";
     }
     return os;
-};
+}
