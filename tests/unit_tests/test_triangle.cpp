@@ -1,10 +1,16 @@
+/*!
+ * \author Jean-François Marronnier
+ * \date 2019-07-11
+ *
+ * \brief Tests  of Class triangle.
+ *         Provide operation around triangle.
+ */
+
 // System under test
 #include "triangle.h"
 
+// Tests library
 #include "gtest/gtest.h"
-#include <iostream>
-#include <sstream>
-
 
 /**
  * \brief triangle tests

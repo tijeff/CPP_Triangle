@@ -1,7 +1,10 @@
-//
-// Created by Jean-François Marronnier on 2019-07-11.
-//
-
+/*!
+ * \author Jean-François Marronnier
+ * \date 2019-07-11
+ *
+ * \brief Class to manage triangle.
+ *         Provide operation around triangle.
+ */
 #ifndef TRIANGLES_TRIANGLE_H
 #define TRIANGLES_TRIANGLE_H
 
