@@ -17,7 +17,7 @@ public:
 
     [[nodiscard]] bool isEquilateral() const;
 
-    [[nodiscard]] bool isIsocele() const;
+    [[nodiscard]] bool isIsosceles() const;
 
     [[nodiscard]] bool isRectangle() const;
 

@@ -18,7 +18,7 @@ bool triangle::isEquilateral() const {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
-bool triangle::isIsocele() const {
+bool triangle::isIsosceles() const {
     return __length[0] == __length[1] || __length[1] == __length[2] || __length[0] == __length[2];
 }
 
@@ -42,7 +42,7 @@ bool triangle::isRectangle() const {
 std::ostream &operator<<(std::ostream &os, const triangle &the_triangle) {
     os << "TRIANGLE: (" << the_triangle.__length[0] << ", " << the_triangle.__length[1] << ", "
        << the_triangle.__length[2] << ")";
-    if (the_triangle.isIsocele()) {
+    if (the_triangle.isIsosceles()) {
         os << " isosceles";
     }
     return os;
