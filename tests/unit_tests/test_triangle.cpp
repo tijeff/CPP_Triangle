@@ -74,3 +74,10 @@ TEST(Tests_triangle, operator_srteam_out_isoceles) { // NOLINT(cert-err58-cpp)
     string_triangle_under_test << triangle_under_test;
     EXPECT_STREQ("TRIANGLE: (7, 12, 7) isosceles", string_triangle_under_test.str().c_str());
 }
+
+TEST(Tests_triangle, operator_srteam_out_equilateral) { // NOLINT(cert-err58-cpp)
+    triangle triangle_under_test(17, 17, 17);
+    std::stringstream string_triangle_under_test;
+    string_triangle_under_test << triangle_under_test;
+    EXPECT_STREQ("TRIANGLE: (17, 17, 17) equilateral", string_triangle_under_test.str().c_str());
+}
