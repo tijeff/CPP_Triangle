@@ -7,6 +7,8 @@
 #include <stdexcept>
 #include <algorithm>
 
+double PRECISION = 100000;
+
 // ---------------------------------------------------------------------------------------------------------------------
 triangle::triangle(double length1, double length2, double length3) :
         __length{length1, length2, length3} {
@@ -35,7 +37,8 @@ bool triangle::isRectangle() const {
     } else {
         length_smaller_1 = __length[0], length_smaller_2 = __length[1];
     }
-    return (length_max * length_max) == (length_smaller_1 * length_smaller_1 + length_smaller_2 * length_smaller_2);
+    return int(PRECISION * (length_max * length_max)) ==
+           int(PRECISION * (length_smaller_1 * length_smaller_1 + length_smaller_2 * length_smaller_2));
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -46,7 +49,8 @@ std::ostream &operator<<(std::ostream &os, const triangle &the_triangle) {
         os << " equilateral";
     } else if (the_triangle.isIsosceles()) {
         os << " isosceles";
-    } else if (the_triangle.isRectangle()) {
+    }
+    if (the_triangle.isRectangle()) {
         os << " rectangle";
     }
     return os;

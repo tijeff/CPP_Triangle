@@ -92,9 +92,14 @@ TEST(Tests_triangle, operator_srteam_out_rectangle) { // NOLINT(cert-err58-cpp)
     EXPECT_STREQ("TRIANGLE: (5, 3, 4) rectangle", string_triangle_under_test.str().c_str());
 }
 
-//TEST(Tests_triangle, operator_srteam_out_rectangle_isocel) { // NOLINT(cert-err58-cpp)
-//    triangle triangle_under_test(2, 2, sqrt(2*2+2*2));
-//    std::stringstream string_triangle_under_test;
-//    string_triangle_under_test << triangle_under_test;
-//    EXPECT_STREQ("TRIANGLE: (5, 3, 4) rectangle", string_triangle_under_test.str().c_str());
-//}
+TEST(Tests_triangle, operator_srteam_out_rectangle_isocel) { // NOLINT(cert-err58-cpp)
+    double hypotenuse = sqrt(2.0 * 2.0 + 2.0 * 2.0);
+    triangle triangle_under_test(2.0, 2.0, hypotenuse);
+    std::stringstream string_triangle_under_test;
+    string_triangle_under_test << triangle_under_test;
+    std::ostringstream strs_hypotenuse;
+    strs_hypotenuse << hypotenuse;
+    std::string str_result =
+            std::string("TRIANGLE: (2, 2, ") + strs_hypotenuse.str() + std::string(") isosceles rectangle");
+    EXPECT_STREQ(str_result.c_str(), string_triangle_under_test.str().c_str());
+}
