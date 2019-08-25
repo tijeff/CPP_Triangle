@@ -46,6 +46,8 @@ std::ostream &operator<<(std::ostream &os, const triangle &the_triangle) {
         os << " equilateral";
     } else if (the_triangle.isIsosceles()) {
         os << " isosceles";
+    } else if (the_triangle.isRectangle()) {
+        os << " rectangle";
     }
     return os;
 };
